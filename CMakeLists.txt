@@ -11,4 +11,6 @@ add_executable(8inf334_tp2 main.cpp
         include/ArticleData.h
         source/Importer.cpp
         include/Importer.h
+        source/JsonParser.cpp
+        include/JsonParser.h
 )
