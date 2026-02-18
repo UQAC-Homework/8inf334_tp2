@@ -8,4 +8,5 @@ add_executable(8inf334_tp2 main.cpp
         include/Logger.h
         source/Exporter.cpp
         include/Exporter.h
+        include/ArticleData.h
 )
