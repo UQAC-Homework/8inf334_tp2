@@ -2,22 +2,30 @@
 
 #include <stdexcept>
 
-Enregistreur::Enregistreur(std::ostream output)
+Enregistreur* Enregistreur::instance = nullptr; 
+
+Enregistreur::Enregistreur(std::ostream& output) : output(output)
 {
-	throw std::logic_error("Function not yet implemented");
+	if (instance == nullptr)
+		instance = this;
 }
 
 Enregistreur::~Enregistreur()
 {
-	throw std::logic_error("Function not yet implemented");
+	if (instance == this)
+		instance = nullptr;
 }
 
-void Enregistreur::enregistrer(std::string message)
+void Enregistreur::enregistrer(const std::string& message)
 {
-	throw std::logic_error("Function not yet implemented");
+	if (instance == nullptr)
+		throw std::runtime_error("Aucune instance de Enregistreur a été créé");
+
+	instance->output << message << std::endl;
 }
 
 void Enregistreur::enregistrer(const std::exception& exception)
 {
-	throw std::logic_error("Function not yet implemented");
+	const auto message = std::string(exception.what());
+	enregistrer("[ERROR] " + message);
 }
