@@ -1,13 +1,16 @@
 #ifndef INC_8INF334_TP2_IMPORTER_H
 #define INC_8INF334_TP2_IMPORTER_H
-#include "ArticleData.h"
+#include "DonneesArticle.h"
 
 
-class Importer
+class Importateur
 {
 public:
+	Importateur();
+	~Importateur();
+
 	/// Imports the given article
-	void importArticle(const ArticleData& article);
+	void importer(const DonneesArticle& article);
 };
 
 

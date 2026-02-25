@@ -1,18 +1,18 @@
-#include "../include/Logger.h"
+#include "../include/AnalysateurJSON.h"
 
 #include <stdexcept>
 
-Logger::Logger(std::ostream& output)
+AnalysateurJSON::AnalysateurJSON()
 {
 	throw std::logic_error("Function not yet implemented");
 }
 
-void Logger::log(std::string_view message)
+AnalysateurJSON::~AnalysateurJSON()
 {
 	throw std::logic_error("Function not yet implemented");
 }
 
-void Logger::logException(const std::exception& exception)
+DonneesArticle AnalysateurJSON::analyser(std::string texte)
 {
 	throw std::logic_error("Function not yet implemented");
 }

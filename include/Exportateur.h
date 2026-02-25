@@ -3,11 +3,14 @@
 #include <string_view>
 
 
-class Exporter
+class Exportateur
 {
 public:
+	Exportateur();
+	~Exportateur();
+
 	/// Exports the JSON content of the article with the given ID
-	std::string_view exportArticle(size_t id);
+	std::string genererRapport(int id);
 };
 
 

@@ -1,13 +1,16 @@
 #ifndef INC_8INF334_TP2_JSONPARSER_H
 #define INC_8INF334_TP2_JSONPARSER_H
-#include "ArticleData.h"
+#include "DonneesArticle.h"
 
 
-class JsonParser
+class AnalysateurJSON
 {
 public:
+	AnalysateurJSON();
+	~AnalysateurJSON();
+
 	/// Parses the given content into an article
-	ArticleData parse(std::string_view content);
+	DonneesArticle analyser(std::string texte);
 };
 
 
