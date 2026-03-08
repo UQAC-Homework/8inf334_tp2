@@ -1,7 +1,15 @@
 #include <iostream>
 
+#include "include/Client.h"
+#include "include/Enregistreur.h"
+
 int main()
 {
-	std::cout << "Hello, World!" << std::endl;
+	const Enregistreur enregistreur(std::cout);
+
+	Client client;
+
+	//client.transfererArticle(10);
+
 	return 0;
 }
