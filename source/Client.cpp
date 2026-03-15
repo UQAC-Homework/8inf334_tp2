@@ -24,5 +24,6 @@ void Client::transfererArticle(int id)
 	catch (const std::exception& e)
 	{
 		Enregistreur::enregistrer(e);
+		Enregistreur::enregistrer("Echec du transfere de l'article '" + std::to_string(id) + "'.");
 	}
 }
