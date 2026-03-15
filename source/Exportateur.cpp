@@ -2,14 +2,16 @@
 
 #include <stdexcept>
 
+#include "../include/Enregistreur.h"
+
 Exportateur::Exportateur()
 {
-	throw std::logic_error("Function not yet implemented");
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 Exportateur::~Exportateur()
 {
-	throw std::logic_error("Function not yet implemented");
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 std::string Exportateur::genererRapport(int id)
