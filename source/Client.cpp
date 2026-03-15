@@ -10,12 +10,16 @@ void Client::transfererArticle(int id)
 {
 	try
 	{
+		Enregistreur::enregistrer("Commencer le transfere de l'article '" + std::to_string(id) + "'...");
+		
 		const auto rapport = exportateur.genererRapport(id);
 		const auto article = analysateurJSON.analyser(rapport);
 
 		validateurArticle.validerArticle(article);
 
 		importateur.importer(article);
+	
+		Enregistreur::enregistrer("Transfere de l'article '" + std::to_string(id) + "' terminer!");
 	}
 	catch (const std::exception& e)
 	{
