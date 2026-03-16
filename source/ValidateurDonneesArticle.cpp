@@ -1,9 +1,8 @@
 #include "../include/ValidateurDonneesArticle.h"
-
+#include "../include/Enregistreur.h"
+#include "../include/DonneesArticle.h"
 #include <stdexcept>
 
-#include "../include/Enregistreur.h"
-#include "../include/ DonneesArticle.h"
 
 ValidateurDonneesArticle::ValidateurDonneesArticle()
 {
@@ -15,7 +14,7 @@ ValidateurDonneesArticle::~ValidateurDonneesArticle()
 	Enregistreur::enregistrer("ValidateurDonneesArticle destruite");
 }
 
-void ValidateurDonneesArticle::validerArticle(const DonneesArticle& article) const
+void ValidateurDonneesArticle::validerArticle(const DonneesArticle& article) 
 {
 	std::string nom =article.obtenirNom();
 	double prix = article.obtenirPrix();

@@ -30,5 +30,9 @@ switch (id) {
 "feuilles_supplémentaires": 20, "material": "plastique", "prix": 40.00 })";
              default:
 				 throw std::logic_error("Exportateur: ID invalide = " + std::to_string(id));
+	case 4 :
+		return R"({"nom" : "" , "prix" :})";
+	case 5:
+		return R"({"nom" : "Article test" , "prix" :})";
             }
          }
