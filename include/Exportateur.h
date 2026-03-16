@@ -1,6 +1,6 @@
 #ifndef INC_8INF334_TP2_EXPORTER_H
 #define INC_8INF334_TP2_EXPORTER_H
-#include <string_view>
+#include <string>
 
 
 class Exportateur
@@ -10,7 +10,7 @@ public:
 	~Exportateur();
 
 	/// Exports the JSON content of the article with the given ID
-	std::string genererRapport(int id);
+	std::string genererRapport(int id) const;
 };
 
 
