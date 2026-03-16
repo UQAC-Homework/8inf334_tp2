@@ -9,7 +9,16 @@ int main()
 
 	Client client;
 
-	//client.transfererArticle(10);
+	client.transfererArticle(1);
+	client.transfererArticle(2);
+	client.transfererArticle(3);
+	client.transfererArticle(3);
+	client.transfererArticle(2);
+
+	// Échec
+	client.transfererArticle(INT8_MAX);
+	client.transfererArticle(4); // Nom vide
+	client.transfererArticle(5); // Prix negatif
 
 	return 0;
 }

@@ -3,12 +3,14 @@
 #include "AnalysateurJSON.h"
 #include "Exportateur.h"
 #include "Importateur.h"
+#include "ValidateurDonneesArticle.h"
 
 
 class Client
 {
 	Exportateur exportateur;
 	Importateur importateur;
+	ValidateurDonneesArticle validateurArticle;
 	AnalysateurJSON analysateurJSON;
 
 public:

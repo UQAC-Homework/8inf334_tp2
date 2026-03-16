@@ -1,20 +1,20 @@
-#include "../include/AnalysateurJSON.h"
+#include "../include/ValidateurDonneesArticle.h"
 
 #include <stdexcept>
 
 #include "../include/Enregistreur.h"
 
-AnalysateurJSON::AnalysateurJSON()
+ValidateurDonneesArticle::ValidateurDonneesArticle()
 {
 	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
-AnalysateurJSON::~AnalysateurJSON()
+ValidateurDonneesArticle::~ValidateurDonneesArticle()
 {
 	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
-DonneesArticle AnalysateurJSON::analyser(std::string texte)
+void ValidateurDonneesArticle::validerArticle(const DonneesArticle& article)
 {
 	throw std::logic_error("Function not yet implemented");
 }

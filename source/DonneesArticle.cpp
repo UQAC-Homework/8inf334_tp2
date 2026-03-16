@@ -2,14 +2,16 @@
 
 #include <stdexcept>
 
+#include "../include/Enregistreur.h"
+
 DonneesArticle::DonneesArticle()
 {
-	throw std::logic_error("Function not yet implemented");
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 DonneesArticle::~DonneesArticle()
 {
-	throw std::logic_error("Function not yet implemented");
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 void DonneesArticle::mettreNom(std::string nom)
