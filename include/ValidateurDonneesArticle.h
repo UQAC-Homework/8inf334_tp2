@@ -10,7 +10,7 @@ public:
 	~ValidateurDonneesArticle();
 
 	/// Validation des donnees d'un article
-	void validerArticle(const DonneesArticle& article) ;
+	void validerArticle(DonneesArticle& article) ;
 };
 
 

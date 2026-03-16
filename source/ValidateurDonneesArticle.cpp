@@ -14,7 +14,7 @@ ValidateurDonneesArticle::~ValidateurDonneesArticle()
 	Enregistreur::enregistrer("ValidateurDonneesArticle destruite");
 }
 
-void ValidateurDonneesArticle::validerArticle(const DonneesArticle& article) 
+void ValidateurDonneesArticle::validerArticle(DonneesArticle& article) 
 {
 	std::string nom =article.obtenirNom();
 	double prix = article.obtenirPrix();
