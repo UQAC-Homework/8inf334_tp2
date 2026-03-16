@@ -16,4 +16,6 @@ add_executable(8inf334_tp2 main.cpp
         source/DonneesArticle.cpp
         source/Client.cpp
         include/Client.h
+        source/ValidateurDonneesArticle.cpp
+        include/ValidateurDonneesArticle.h
 )
