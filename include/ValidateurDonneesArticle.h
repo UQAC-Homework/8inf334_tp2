@@ -9,8 +9,8 @@ public:
 	ValidateurDonneesArticle();
 	~ValidateurDonneesArticle();
 
-	/// Validates the given article
-	void validerArticle(const DonneesArticle& article);
+	/// Validation des donnees d'un article
+	void validerArticle(DonneesArticle& article) ;
 };
 
 
