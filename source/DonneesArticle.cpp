@@ -16,35 +16,49 @@ DonneesArticle::~DonneesArticle()
 
 void DonneesArticle::mettreNom(std::string nom)
 {
-	throw std::logic_error("Function not yet implemented");
+	 this->nom = nom;
+	
 }
 
 std::string DonneesArticle::obtenirNom()
 {
-	throw std::logic_error("Function not yet implemented");
+	return nom;
+
 }
 
 void DonneesArticle::mettrePrix(double prix)
 {
-	throw std::logic_error("Function not yet implemented");
+	this->prix = prix;
+	
 }
 
 double DonneesArticle::obtenirPrix()
 {
-	throw std::logic_error("Function not yet implemented");
+	
+	return prix;
 }
 
 void DonneesArticle::mettrePropriete(std::string nom, std::any valeur)
 {
-	throw std::logic_error("Function not yet implemented");
+	proprietes[nom] = valeur;
+	
+	
 }
 
 std::any DonneesArticle::obtenirPropriete(std::string nom)
 {
-	throw std::logic_error("Function not yet implemented");
+	 auto resultat = proprietes.find(nom);
+	 return resultat->second;
+	
 }
 
 std::vector<std::string> DonneesArticle::obtenirNomProprietes()
-{
-	throw std::logic_error("Function not yet implemented");
+{   std::vector<std::string> noms;
+
+	for (const auto& paire : proprietes) {
+        noms.push_back(paire.first);
+    }
+
+    return noms;
+	
 }
