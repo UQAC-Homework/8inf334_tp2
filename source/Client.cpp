@@ -6,7 +6,7 @@ Client::Client() = default;
 
 Client::~Client() = default;
 
-void Client::transfererArticle(int id)
+void Client::transfererArticle(const int id)
 {
 	try
 	{

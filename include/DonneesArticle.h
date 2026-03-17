@@ -21,12 +21,12 @@ public:
 	~DonneesArticle();
 
 	void mettreNom(std::string nom);
-	std::string obtenirNom();
+	[[nodiscard]] std::string obtenirNom() const;
 	void mettrePrix(double prix);
-	double obtenirPrix();
+	[[nodiscard]] double obtenirPrix() const;
 	void mettrePropriete(std::string nom, std::any valeur);
-	std::any obtenirPropriete(std::string nom);
-	std::vector<std::string> obtenirNomProprietes();
+	[[nodiscard]] std::any obtenirPropriete(std::string nom) const;
+	[[nodiscard]] std::vector<std::string> obtenirNomProprietes() const;
 };
 
 #endif //INC_8INF334_TP2_ARTICLEDATA_H

@@ -10,7 +10,7 @@ public:
 	~AnalysateurJSON();
 
 	/// Parses the given content into an article
-	DonneesArticle analyser(std::string texte);
+	DonneesArticle analyser(const std::string& texte);
 };
 
 

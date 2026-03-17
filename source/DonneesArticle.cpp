@@ -20,7 +20,7 @@ void DonneesArticle::mettreNom(std::string nom)
 	
 }
 
-std::string DonneesArticle::obtenirNom()
+std::string DonneesArticle::obtenirNom() const
 {
 	return nom;
 
@@ -32,7 +32,7 @@ void DonneesArticle::mettrePrix(double prix)
 	
 }
 
-double DonneesArticle::obtenirPrix()
+double DonneesArticle::obtenirPrix() const
 {
 	
 	return prix;
@@ -45,14 +45,14 @@ void DonneesArticle::mettrePropriete(std::string nom, std::any valeur)
 	
 }
 
-std::any DonneesArticle::obtenirPropriete(std::string nom)
+std::any DonneesArticle::obtenirPropriete(std::string nom) const
 {
 	 auto resultat = proprietes.find(nom);
 	 return resultat->second;
 	
 }
 
-std::vector<std::string> DonneesArticle::obtenirNomProprietes()
+std::vector<std::string> DonneesArticle::obtenirNomProprietes() const
 {   std::vector<std::string> noms;
 
 	for (const auto& paire : proprietes) {

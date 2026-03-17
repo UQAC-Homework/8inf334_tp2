@@ -1,11 +1,8 @@
 #include "../include/AnalysateurJSON.h"
-#include "json.hpp"
-
-using json = nlohmann::json;
+#include "../include/Enregistreur.h"
+#include "../include/json.hpp"
 
 #include <stdexcept>
-
-#include "../include/Enregistreur.h"
 
 AnalysateurJSON::AnalysateurJSON()
 {
@@ -17,11 +14,11 @@ AnalysateurJSON::~AnalysateurJSON()
 	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
-DonneesArticle AnalysateurJSON::analyser(std::string texte)
+DonneesArticle AnalysateurJSON::analyser(const std::string& texte)
 {
 	DonneesArticle article;
 
-    json j = json::parse(texte);
+    auto j = nlohmann::json::parse(texte);
     
     if (!j.contains("nom") || !j.contains("prix")) {
         throw std::runtime_error("JSON invalide : champs obligatoires absents.");
