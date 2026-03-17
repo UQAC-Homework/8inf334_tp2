@@ -10,7 +10,7 @@ public:
 	~Exportateur();
 
 	/// Exports the JSON content of the article with the given ID
-	std::string genererRapport(int id) const;
+	[[nodiscard]] std::string genererRapport(int id) const;
 };
 
 

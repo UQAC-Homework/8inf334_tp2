@@ -11,7 +11,7 @@ class DonneesArticle
 	std::string nom;
 
 	/// Price of the article in dollars
-	double prix;
+	double prix{};
 
 	/// List of properties specific to this article
 	std::map<std::string, std::any> proprietes;
@@ -20,13 +20,13 @@ public:
 	DonneesArticle();
 	~DonneesArticle();
 
-	void mettreNom(std::string nom);
-	std::string obtenirNom();
+	void mettreNom(const std::string& nom);
+	[[nodiscard]] std::string obtenirNom() const;
 	void mettrePrix(double prix);
-	double obtenirPrix();
-	void mettrePropriete(std::string nom, std::any valeur);
-	std::any obtenirPropriete(std::string nom);
-	std::vector<std::string> obtenirNomProprietes();
+	[[nodiscard]] double obtenirPrix() const;
+	void mettrePropriete(const std::string& nom, std::any valeur);
+	[[nodiscard]] std::any obtenirPropriete(const std::string& nom) const;
+	[[nodiscard]] std::vector<std::string> obtenirNomProprietes() const;
 };
 
 #endif //INC_8INF334_TP2_ARTICLEDATA_H

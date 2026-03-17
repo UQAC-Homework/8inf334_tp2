@@ -1,64 +1,52 @@
 #include "../include/DonneesArticle.h"
-
-#include <stdexcept>
-
 #include "../include/Enregistreur.h"
 
-DonneesArticle::DonneesArticle()
+#include <utility>
+
+DonneesArticle::DonneesArticle() = default;
+
+DonneesArticle::~DonneesArticle() = default;
+
+void DonneesArticle::mettreNom(const std::string& nom)
 {
-	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
+	this->nom = nom;
 }
 
-DonneesArticle::~DonneesArticle()
-{
-	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
-}
-
-void DonneesArticle::mettreNom(std::string nom)
-{
-	 this->nom = nom;
-	
-}
-
-std::string DonneesArticle::obtenirNom()
+std::string DonneesArticle::obtenirNom() const
 {
 	return nom;
-
 }
 
-void DonneesArticle::mettrePrix(double prix)
+void DonneesArticle::mettrePrix(const double prix)
 {
 	this->prix = prix;
-	
 }
 
-double DonneesArticle::obtenirPrix()
+double DonneesArticle::obtenirPrix() const
 {
-	
 	return prix;
 }
 
-void DonneesArticle::mettrePropriete(std::string nom, std::any valeur)
+void DonneesArticle::mettrePropriete(const std::string& nom, std::any valeur)
 {
-	proprietes[nom] = valeur;
-	
-	
+	proprietes[nom] = std::move(valeur);
 }
 
-std::any DonneesArticle::obtenirPropriete(std::string nom)
+std::any DonneesArticle::obtenirPropriete(const std::string& nom) const
 {
-	 auto resultat = proprietes.find(nom);
-	 return resultat->second;
-	
+	auto resultat = proprietes.find(nom);
+	return resultat->second;
 }
 
-std::vector<std::string> DonneesArticle::obtenirNomProprietes()
-{   std::vector<std::string> noms;
+std::vector<std::string> DonneesArticle::obtenirNomProprietes() const
+{
+	std::vector<std::string> noms;
 
-	for (const auto& paire : proprietes) {
-        noms.push_back(paire.first);
-    }
+	noms.reserve(proprietes.size());
+	for (const auto& paire : proprietes)
+	{
+		noms.push_back(paire.first);
+	}
 
-    return noms;
-	
+	return noms;
 }
