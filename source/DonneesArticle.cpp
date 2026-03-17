@@ -2,14 +2,16 @@
 
 #include <stdexcept>
 
-DonneesArticle::DonneesArticle(): nom(""), prix(0.0)
+#include "../include/Enregistreur.h"
+
+DonneesArticle::DonneesArticle()
 {
-	
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 DonneesArticle::~DonneesArticle()
 {
-	
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 void DonneesArticle::mettreNom(std::string nom)

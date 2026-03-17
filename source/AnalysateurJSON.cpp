@@ -5,14 +5,16 @@ using json = nlohmann::json;
 
 #include <stdexcept>
 
+#include "../include/Enregistreur.h"
+
 AnalysateurJSON::AnalysateurJSON()
 {
-	
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 AnalysateurJSON::~AnalysateurJSON()
 {
-	
+	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
 }
 
 DonneesArticle AnalysateurJSON::analyser(std::string texte)
