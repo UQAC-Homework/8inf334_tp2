@@ -4,15 +4,9 @@
 
 #include <stdexcept>
 
-AnalysateurJSON::AnalysateurJSON()
-{
-	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
-}
+AnalysateurJSON::AnalysateurJSON() = default;
 
-AnalysateurJSON::~AnalysateurJSON()
-{
-	Enregistreur::enregistrer("[ERROR] Function not yet implemented");
-}
+AnalysateurJSON::~AnalysateurJSON() = default;
 
 DonneesArticle AnalysateurJSON::analyser(const std::string& texte)
 {

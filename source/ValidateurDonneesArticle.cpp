@@ -24,15 +24,10 @@ void ValidateurDonneesArticle::validerArticle(const DonneesArticle& article) con
 	// verification si le nom est vide
 
 	if (nom.empty())
-	{
-		Enregistreur::enregistrer("erreur: le nom est vide");
-		throw std::invalid_argument("erreur: nom est vide");
-	}
+		throw std::invalid_argument("Nom est vide");
 	// le prix doit etre positif
 	if (prix <= 0.0)
-	{
-		Enregistreur::enregistrer("prix invalide");
-		throw std::invalid_argument("prix invalide");
-	}
-	Enregistreur::enregistrer("Article valide:" + nom);
+		throw std::invalid_argument("Prix invalide");
+
+	Enregistreur::enregistrer("Article valide: " + nom);
 }
